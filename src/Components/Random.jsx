@@ -33,9 +33,9 @@ function Random({ selectedCity }) {
         <section className='random-container'>
 
             <article className='random-header' >
-                <h3>¿Quieres viajar pero no sabes a dónde ir?</h3>
-                <p>¡No temas más, mi viajero confundido! Presiona el botón e inspírate</p>
-                <button onClick={() => randomCity(true)} > Generar mi destino </button>
+                <h3>Want to travel but don't know where to go?</h3>
+                <p>Fear no more my confused wandere! Push the button and inspire yourself</p>
+                <button onClick={() => randomCity(true)} > Generate my destination </button>
                 {!show ? <img src={plan} alt="" /> : null}
             </article>
 
