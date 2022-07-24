@@ -1,7 +1,7 @@
 const initialState = {
     cities: [],
     cart: [],
-    currentItem: []
+    currentItem: null,
 }
 
 
