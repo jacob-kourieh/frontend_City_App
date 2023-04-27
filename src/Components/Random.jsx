@@ -12,21 +12,18 @@ function Random({ selectedCity }) {
     const [random, setRandom] = useState([]);
     const [show, setShow] = useState(false)
 
-    //när vår komponent renderas första gången - sätts state till vår store.allProducts.cities
+
     store.subscribe(() => (setRandom(store.getState().allProducts.cities)));
     useEffect(() => (setRandom(citiesItem)), []);
 
 
-    //random city function som vi kallar den när klicka på random knapp.
+
     const randomCity = () => {
         let randomc = Math.floor(Math.random() * citiesItem.length)
         setRandom(citiesItem[randomc])
         setShow(true)
 
     }
-
-
-
 
 
     return (

@@ -6,16 +6,13 @@ import { addCity, selectedCity, loadCurrentItem } from '../actions/cityAction';
 import { Link } from "react-router-dom";
 
 
-
-
 function Cities({ setCity, loadCurrentItem }) {
     const [searchTerm, setSearchTerm] = useState("");
     const [cities, setCities] = useState([])
     const dispatch = useDispatch();
-    const url = 'https://backend-city-be57nqltj-jacob-kourieh.vercel.app/cities.json'
+    const url = 'https://backend-city-api-git-master-jacob-kourieh.vercel.app/cities.json'
 
 
-    //tar emot ipet genom att fetcha här
     useEffect(() => {
         fetch(url)
             .then(result => result.json())
@@ -23,12 +20,9 @@ function Cities({ setCity, loadCurrentItem }) {
     }, [])
 
 
-    //Dispatchar addCity action och uppdatterar den initialStatet och returnerar den till data apiet.
     useEffect(() => {
         dispatch(addCity(cities))
     }, [cities])
-
-
 
 
 
